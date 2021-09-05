@@ -5,7 +5,14 @@ import Task from "./Task";
 const TaskList = (props) => {
   return (
     <div className="task-list">
-      <h1>Hii</h1>
+      {props.tasks.map((task) => (
+        <Task
+          key={task.id}
+          tasks={props.tasks}
+          setTasks={props.setTasks}
+          task={task}
+        />
+      ))}
     </div>
   );
 };

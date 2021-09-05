@@ -10,6 +10,7 @@ const TaskForm = (props) => {
       {
         id: uuidv4(),
         taskContent: props.taskContent,
+        isDone: false,
       },
     ]);
 
@@ -21,8 +22,8 @@ const TaskForm = (props) => {
   };
 
   return (
-    <form onSubmit={addTask}>
-      <textarea onChange={changeHandler}></textarea>
+    <form className="task-form" onSubmit={addTask}>
+      <textarea value={props.taskContent} onChange={changeHandler}></textarea>
       <button>Add Task</button>
     </form>
   );

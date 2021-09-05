@@ -1,14 +1,24 @@
 import React from "react";
 
-const Task = (props) => {
-  const taskDone = () => {};
+import "../styles/Task.css";
 
-  const deleteTask = () => {};
+const Task = (props) => {
+  const taskToggle = () => {
+    props.tasks.map((t) => {
+      if (t.id === props.task.id) {
+        document.querySelector(".task-content").classList.toggle("task-done");
+      }
+    });
+  };
+
+  const deleteTask = () => {
+    props.setTasks(props.tasks.filter((t) => t.id !== props.task.id));
+  };
 
   return (
-    <div>
-      <p>Task content</p>
-      <button onClick={taskDone}>Done</button>
+    <div className="task">
+      <p className="task-content">{props.task.taskContent}</p>
+      <button onClick={taskToggle}>Done</button>
       <button onClick={deleteTask}>Delete</button>
     </div>
   );
