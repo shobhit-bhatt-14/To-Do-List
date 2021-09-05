@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 
+import "./styles/App.css";
+
 const App = () => {
   const [tasks, setTasks] = useState([]);
   const [taskContent, setTaskContent] = useState("");
