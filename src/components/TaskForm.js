@@ -1,6 +1,8 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 
+import "../styles/TaskForm.css";
+
 const TaskForm = (props) => {
   const addTask = (e) => {
     e.preventDefault();
@@ -10,7 +12,6 @@ const TaskForm = (props) => {
       {
         id: uuidv4(),
         taskContent: props.taskContent,
-        isDone: false,
       },
     ]);
 
@@ -23,8 +24,15 @@ const TaskForm = (props) => {
 
   return (
     <form className="task-form" onSubmit={addTask}>
-      <textarea value={props.taskContent} onChange={changeHandler}></textarea>
-      <button>Add Task</button>
+      <textarea
+        placeholder="Enter task ..."
+        rows="1"
+        value={props.taskContent}
+        onChange={changeHandler}
+      ></textarea>
+      <button>
+        <strong>+</strong>&nbsp; Add Task
+      </button>
     </form>
   );
 };

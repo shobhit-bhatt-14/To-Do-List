@@ -1,14 +1,14 @@
 import React from "react";
+import { useState } from "react/cjs/react.development";
 
 import "../styles/Task.css";
 
 const Task = (props) => {
+  const [done, setDone] = useState(false);
+  let taskContentClass = done ? "task-done" : "task-content";
+
   const taskToggle = () => {
-    props.tasks.map((t) => {
-      if (t.id === props.task.id) {
-        document.querySelector(".task-content").classList.toggle("task-done");
-      }
-    });
+    setDone(!done);
   };
 
   const deleteTask = () => {
@@ -17,9 +17,13 @@ const Task = (props) => {
 
   return (
     <div className="task">
-      <p className="task-content">{props.task.taskContent}</p>
-      <button onClick={taskToggle}>Done</button>
-      <button onClick={deleteTask}>Delete</button>
+      <p className={taskContentClass}>{props.task.taskContent}</p>
+      <button onClick={taskToggle}>
+        <strong>&#10004;</strong>&nbsp; Done
+      </button>
+      <button onClick={deleteTask}>
+        <strong>&#x2718;</strong>&nbsp; Delete
+      </button>
     </div>
   );
 };
