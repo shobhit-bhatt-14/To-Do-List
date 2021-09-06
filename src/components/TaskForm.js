@@ -31,7 +31,7 @@ const TaskForm = (props) => {
         onChange={changeHandler}
       ></textarea>
       <button>
-        <strong>+</strong>&nbsp; Add Task
+        <strong>&#xFF0B;</strong>&nbsp; Add
       </button>
     </form>
   );

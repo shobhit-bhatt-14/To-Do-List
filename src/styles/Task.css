@@ -3,26 +3,22 @@
   justify-content: center;
   align-items: center;
   gap: 2vh;
-  width: 100%;
+  padding: 0 2vh;
+  width: calc(100% - 4vh);
   height: 9vh;
   border-radius: 10px;
   background-image: linear-gradient(to bottom right, #fea858, #ed765e);
 }
 
+.task p {
+  width: 100%;
+}
+
 .task-content {
   color: #0f0;
-  font-size: 3vh;
-  vertical-align: middle;
 }
 
 .task-done {
   color: #f00;
-  font-size: 3vh;
   text-decoration: line-through;
-}
-
-.task button {
-  font-size: 3vh;
-  width: auto;
-  padding: 1vh;
 }

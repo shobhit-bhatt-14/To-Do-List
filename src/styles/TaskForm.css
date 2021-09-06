@@ -12,10 +12,5 @@
 
 .task-form textarea {
   resize: none;
-  font-size: 2vw;
   width: 100%;
-}
-
-.task-form button {
-  font-size: 2vw;
 }

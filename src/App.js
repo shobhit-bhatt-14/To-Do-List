@@ -6,7 +6,12 @@ import TaskList from "./components/TaskList";
 import "./styles/App.css";
 
 const App = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([
+    { taskContent: "eleplant elephant" },
+    { taskContent: "monkey" },
+    { taskContent: "deer" },
+    { taskContent: "a" },
+  ]);
   const [taskContent, setTaskContent] = useState("");
 
   return (
