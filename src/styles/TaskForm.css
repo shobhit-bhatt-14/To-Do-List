@@ -13,4 +13,7 @@
 .task-form textarea {
   resize: none;
   width: 100%;
+  padding: 1vh;
+  border: none;
+  border-radius: 10px;
 }

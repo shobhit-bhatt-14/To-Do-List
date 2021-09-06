@@ -16,6 +16,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <h1>To Do List</h1>
       <TaskForm
         tasks={tasks}
         setTasks={setTasks}

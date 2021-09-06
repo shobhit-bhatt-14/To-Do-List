@@ -25,13 +25,14 @@ const TaskForm = (props) => {
   return (
     <form className="task-form" onSubmit={addTask}>
       <textarea
+        contentEditable="true"
         placeholder="Enter task ..."
         rows="1"
         value={props.taskContent}
         onChange={changeHandler}
       ></textarea>
       <button>
-        <strong>&#xFF0B;</strong>&nbsp; Add
+        <strong>&#xFF0B;</strong>&nbsp;Add
       </button>
     </form>
   );

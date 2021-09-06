@@ -1,17 +1,12 @@
 *,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Brush Script MT", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 3vh;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  outline: none;
+  font-weight: bold;
 }
 
 button {
@@ -19,5 +14,12 @@ button {
   border: none;
   border-radius: 15px;
   padding: 1vh;
-  background-image: linear-gradient(to bottom right, #aebaf8, #c973ff);
+  transform-style: preserve-3d;
+  transition: transform 0.4s linear;
+
+  background-image: linear-gradient(to bottom right, #fea858, #ed765e);
+}
+
+button:hover {
+  transform: scale(1.2);
 }

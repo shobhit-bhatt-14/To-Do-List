@@ -6,6 +6,7 @@ import "../styles/Task.css";
 const Task = (props) => {
   const [done, setDone] = useState(false);
   let taskContentClass = done ? "task-done" : "task-content";
+  let taskActivity = done ? "task task-activity" : "task";
 
   const taskToggle = () => {
     setDone(!done);
@@ -16,7 +17,7 @@ const Task = (props) => {
   };
 
   return (
-    <div className="task">
+    <div className={taskActivity}>
       <p className={taskContentClass}>{props.task.taskContent}</p>
       <button onClick={taskToggle}>
         <strong>&#10004;</strong>&nbsp; Done

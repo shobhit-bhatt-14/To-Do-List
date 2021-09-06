@@ -3,19 +3,24 @@
   justify-content: center;
   align-items: center;
   gap: 2vh;
-  padding: 0 2vh;
+  padding: 0.5vh 2vh;
   width: calc(100% - 4vh);
-  height: 9vh;
+  min-height: 9vh;
   border-radius: 10px;
-  background-image: linear-gradient(to bottom right, #fea858, #ed765e);
+  background-image: linear-gradient(to bottom right, #bfffc7, #849b5c);
+}
+
+.task-activity {
+  opacity: 0.5;
 }
 
 .task p {
   width: 100%;
+  word-break: break-all;
 }
 
 .task-content {
-  color: #0f0;
+  color: #00f;
 }
 
 .task-done {
